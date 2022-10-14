@@ -15,7 +15,9 @@
 # $ find desc css animated border
 # => returns all snippets with the words "css", "animated", and "border" in the description
 
-
 # tag formatting:
-# keys: <[example-key]>
-# title: # example title
+# title: "# example title" "## example title 2" "### example title 3"
+# keys: "<[example-key"
+# desc: "<~description~>"
+
+print("init")
