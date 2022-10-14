@@ -14,3 +14,8 @@
 # => returns all snippets with clamp in title
 # $ find desc css animated border
 # => returns all snippets with the words "css", "animated", and "border" in the description
+
+
+# tag formatting:
+# keys: <[example-key]>
+# title: # example title
