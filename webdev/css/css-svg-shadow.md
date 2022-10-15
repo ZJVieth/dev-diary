@@ -36,5 +36,73 @@
 }
 ```
 
-
 ![example image](./images/9E8447B5-6F27-4689-ABB8-F75CB02CBD1C.jpeg)
+
+### List of available SVG filter effects
+```svg
+<feGaussianBlur>
+<feDropShadow>
+<feMorphology>
+<feDisplacementMap>
+<feBlend>
+<feColorMatrix>
+<feConvolveMatrix>
+<feComponentTransfer>
+<feSpecularLighting>
+<feDiffuseLighting>
+<feFlood>
+<feTurbulence>
+<feImage>
+<feTile>
+<feOffset>
+<feComposite>
+<feMerge>
+```
+
+### SVG Inset Shadow
+<[inset
+```svg
+<filter id='inset-shadow'>
+  <!-- Shadow offset -->
+  <feOffset
+    dx='0'
+    dy='0'
+  />
+
+  <!-- Shadow blur -->
+  <feGaussianBlur
+    stdDeviation='1'
+    result='offset-blur'
+  />
+
+  <!-- Invert drop shadow to make an inset shadow -->
+  <feComposite
+    operator='out'
+    in='SourceGraphic'
+    in2='offset-blur'
+    result='inverse'
+  />
+  
+  <!-- Cut color inside shadow -->
+  <feFlood
+    flood-color='black'
+    flood-opacity='.95'
+    result='color'
+  />
+  <feComposite
+    operator='in'
+    in='color'
+    in2='inverse'
+    result='shadow'
+  />
+
+  <!-- Placing shadow over element -->
+  <feComposite
+    operator='over'
+    in='shadow'
+    in2='SourceGraphic'
+  />
+</filter>
+```
+
+![example image](./images/
