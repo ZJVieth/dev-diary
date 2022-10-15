@@ -29,6 +29,11 @@
   filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
   /* (dx dy stdDev floodColor) */
 }
+
+.withSVGFilter {
+  filter: url(#shadow1);
+  /* as defined in above html snippet */
+}
 ```
 
 
