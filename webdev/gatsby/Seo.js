@@ -5,7 +5,7 @@
  * <[jsx
  * <[header
  *
- * <~SEO component that queries for data with Gatsby's useStaticQuery React hook.~>
+ * <°SEO component that queries for data with Gatsby's useStaticQuery React hook.°>
  *
  * See: https://www.gatsbyjs.com/docs/use-static-query/
  */
@@ -15,8 +15,8 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
 function Seo({ description, title, children }) {
-    const { site } = useStaticQuery(
-        graphql`
+  const { site } = useStaticQuery(
+    graphql`
        query {
          site {
            siteMetadata {
@@ -27,34 +27,34 @@ function Seo({ description, title, children }) {
          }
        }
      `
-    )
+  )
 
-    const metaDescription = description || site.siteMetadata.description
-    const defaultTitle = site.siteMetadata?.title
+  const metaDescription = description || site.siteMetadata.description
+  const defaultTitle = site.siteMetadata?.title
 
-    return (
-        <>
-            <title>{defaultTitle ? `${title} | ${defaultTitle}` : title}</title>
-            <meta name="description" content={metaDescription} />
-            <meta property="og:title" content={title} />
-            <meta property="og:description" content={metaDescription} />
-            <meta property="og:type" content="website" />
-            <meta name="twitter:card" content="summary" />
-            <meta name="twitter:creator" content={site.siteMetadata?.author || ``} />
-            <meta name="twitter:title" content={title} />
-            <meta name="twitter:description" content={metaDescription} />
-            {children}
-        </>
-    )
+  return (
+    <>
+      <title>{defaultTitle ? `${title} | ${defaultTitle}` : title}</title>
+      <meta name="description" content={metaDescription} />
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={metaDescription} />
+      <meta property="og:type" content="website" />
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:creator" content={site.siteMetadata?.author || ``} />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={metaDescription} />
+      {children}
+    </>
+  )
 }
 
 Seo.defaultProps = {
-    description: ``,
+  description: ``,
 }
 
 Seo.propTypes = {
-    description: PropTypes.string,
-    title: PropTypes.string.isRequired,
+  description: PropTypes.string,
+  title: PropTypes.string.isRequired,
 }
 
 export default Seo

@@ -18,6 +18,6 @@
 # tag formatting:
 # title: "# example title" "## example title 2" "### example title 3"
 # keys: "<[example-key"
-# desc: "<~description~>"
+# desc: "<°description°>"
 
 print("init")

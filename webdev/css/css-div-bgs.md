@@ -10,7 +10,7 @@
 <[star
 <[space
 
-<~Masking container to fade out towards it edges with highest opacity in center.~>
+<°Masking container to fade out towards its edges with highest opacity in center.°>
 ```css
 .radialEdgeFade {
     background: rgba(200, 200, 200, 0.8);
