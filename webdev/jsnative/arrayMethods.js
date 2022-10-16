@@ -3,6 +3,7 @@
  * <[js
  * <[array
  * <[list
+ */
 
 var n_out = 0
 var bool_result = false
