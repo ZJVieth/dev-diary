@@ -36,3 +36,5 @@ CSS
     content: attr(notifCount);
 }
 ```
+
+![example image](./images/A1C93DAE-7D38-4AB6-84CB-87534370D206.png)
