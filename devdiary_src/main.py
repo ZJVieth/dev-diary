@@ -21,3 +21,8 @@
 # desc: "<°description°>"
 
 print("init")
+
+
+# Start Scanner Thread
+
+# Start console loop
