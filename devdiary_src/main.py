@@ -20,9 +20,41 @@
 # keys: "<[example-key"
 # desc: "<°description°>"
 
-print("init")
+if __name__ == "__main__":
+    main()
 
+SCAN_WAITING = 0
+SCAN_RUNNING = 1
+SCAN_FINISHED = 2
 
-# Start Scanner Thread
+# -----------------------
+def main():
+    data = []
+    scan_state = SCAN_RUNNING
 
-# Start console loop
+    # Start Scanner Thread
+
+    while (scan_state == SCAN_Running):
+        pass
+
+    scan_state = SCAN_WAITING
+
+    # Start console loop
+    while (True):
+        print("$ ")
+        line_in = input()
+
+        [cmd, args] = line_in.split(" ")
+
+        if cmd == "find":
+            cmd_find(args)
+
+        if cmd == "exit":
+            break
+
+    # Program End
+
+# -----------------------
+def cmd_find(args):
+    [mode, search_para] = args
+    
