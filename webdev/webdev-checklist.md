@@ -12,6 +12,7 @@
 - [ ] Image Loading Optimized
 - [ ] Mobile Version Responsive
 - [ ] Desktop Version Available
+- [ ] Accessibility Standards Met
 
 ### Backend Checklist
 - [ ] Database Rules Set
