@@ -5,3 +5,25 @@ Personal repository to catalogue and reuse useful assets.
 ``` cmd
 $ ./devdiary
 ```
+
+## File Markdown
+Markdown:
+
+```md
+# Title
+## Title
+### Title
+#### Title
+<[key
+<°Description°>
+```
+
+Javascript:
+
+```js
+/**
+ * # Title
+ * <[key
+ * <°Description°>
+ */ 
+```
