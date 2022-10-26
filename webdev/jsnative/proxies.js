@@ -7,7 +7,10 @@
  *[https://fjolt.com/article/javascript-proxy-object]
  */
  
- const target = {
+ 
+// # Regular Object Proxies
+
+const target = {
   fName: "Max",
   lName: "Muster",
   age: 24
@@ -40,6 +43,10 @@ const handler = {
     return object[prop] 
   },
   
+  // deleteProperty: traps "delete obj['prop']" calls
+  deleteProperty: (obj, prop) => console.log(`The ${prop} property has been deleted.`),
+  
+  
 }  
 
 const proxyEx = new Proxy(target, handler)
@@ -48,7 +55,57 @@ const proxyEx = new Proxy(target, handler)
 console.log(proxyEx.name) // triggers get
 
 proxyEx['age'] = 50
-Object.defineProperty(proxyEx, "title", "Mister")
+Object.defineProperty(
+  proxyEx,
+  "title", 
+  { 
+    value: "Mister",
+    writable: false
+  }
+)  
 
 
 console.log('address' in proxyEx) // triggers has
+
+delete obj['title'] //triggers deleteProperty
+
+
+// # Function Proxies
+// <[function <[constructor
+
+const funcTarget = a => {
+  return a + a
+}
+
+const funcHandler = {
+  apply: (obj, thisObj, argList) => {
+    const output = obj(argList)
+    console.log("Output of func is:", output)
+    return output
+  }
+}
+
+const proxyFunc = new Proxy(funcTarget, funcHandler)
+
+proxyFunc(10) // triggers apply
+
+
+function creatingFuncTarget(a, b, c) {
+  return {
+    a, b, c
+  } 
+}
+
+const creatingFuncHandler = {
+  construct: (obj, argsList, newTarget) => {
+    return {
+      ...obj(...argsList),
+      d: 100,
+      e: "Hi
+    }
+  }
+}
+
+const proxyCreatingFunc = new Proxy(creatingFuncTarget, creatingFuncHandler)
+
+console.log(new proxyCreatingFunc(10, 11, 12))
