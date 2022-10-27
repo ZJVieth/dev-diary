@@ -24,3 +24,5 @@ Example Element:
     box-shadow: inset -0.6em -0.6em 1em rgba(165, 79, 29, 0.6), inset 0.4em 0.4em 0.5em rgba(245, 230, 221, 0.6), 0.8em 0.8em 2em rgba(165, 79, 29, 0.6);
 }
 ```
+
+![Claymorphism Example](./images/claymorphism.jpeg)
