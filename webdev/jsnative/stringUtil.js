@@ -15,3 +15,10 @@ const reverseString = (string) => {
     .reverse()
     .join("");
 };
+
+
+/*
+ * <[vowel
+ */
+const isVowel = (letter) =>
+  ["a", "e", "i", "o", "u"].includes(letter);

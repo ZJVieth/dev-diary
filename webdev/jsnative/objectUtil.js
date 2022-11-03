@@ -14,3 +14,19 @@ const isObjectEmpty = (object) => {
   for (_ in object) return false;
   return true;
 };
+
+
+/*
+ * these need testing
+ */
+const forEachKey = (obj, callback) => {
+  Object.keys(obj).forEach((key, i) => {
+    callback(key, obj[key], i)
+  }
+}
+
+const mapKeys = (obj, callback) => {
+  return Object.keys(obj).map((key, i) => {
+    callback(key, obj[key], i)
+  }
+}
