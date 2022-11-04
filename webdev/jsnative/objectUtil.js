@@ -27,6 +27,6 @@ const forEachKey = (obj, callback) => {
 
 const mapKeys = (obj, callback) => {
   return Object.keys(obj).map((key, i) => {
-    callback(key, obj[key], i)
+    return callback(key, obj[key], i)
   })
 }
