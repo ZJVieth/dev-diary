@@ -1,0 +1,26 @@
+<html>
+    <head>
+    
+    </head>
+    <body>
+    
+        <!-- Using Module and direct import -->
+        <script type="module">
+            import { createApp } from 'https://unpkg.com/vue@3/dist/vue.esm-browser.js'
+        </script>
+    
+        <!-- Using Import Map -->
+        <script type="importmap">
+            {
+                "imports": {
+                    "vue": "https://unpkg.com/vue@3/dist/vue.esm-browser.js"
+                }
+            {
+        </script>
+        <script type="module">
+            import { createApp } from 'vue'
+        </script> 
+    
+    
+    </body>
+</html>
