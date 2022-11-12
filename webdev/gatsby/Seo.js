@@ -10,6 +10,19 @@
  * See: https://www.gatsbyjs.com/docs/use-static-query/
  */
 
+/*
+ * Add this to gatsby-config:
+ */
+const metaData = {
+  siteMetadata: {
+    title: `<title>`,
+    siteUrl: `<url>`,
+    author: '<author>',
+    description: '<desc>.'
+  }
+}
+
+/* Actual Component */
 import * as React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
