@@ -1,0 +1,36 @@
+/*
+ * # CSS Button Vibration Animation
+ * <[css <[button <[vibrate <[animation
+ * <° Code snippet for a button with a vibration animation. °>
+*/
+
+button {
+    background: #ea0000;
+    box-sizing: border-box;
+    border-radius: 0.6rem;
+    align-self: center;
+    font-size: 17px;
+    font-weight: 400;
+    margin: 20px;
+    padding: 20px 40px;
+    text-align: center;
+    color: aliceblue;
+    font-family: Pangolin;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    animation: vibrate 100ms ease-in-out;
+    animation-iteration-count: 7;
+}
+
+@keyframes vibrate {
+    0% {
+        transform: rotate(7deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}

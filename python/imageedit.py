@@ -9,3 +9,4 @@ def remove_bg(path):
     output = remove(inp)
     path_out = "".join(path.split('.').insert(1, '_bgremoved'))
     output.save(path_out)
+    
